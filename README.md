@@ -1,6 +1,10 @@
 # Less Rails Bootswatch
 
 less-rails-bootswatch is straightforward Bootswatches integration with Rails.
+This gem depends on following:
+
+* less-rails-bootstrap https://github.com/metaskills/less-rails-bootstrap
+* bootswatch http://bootswatch.com/
 
 ## Installation
 
@@ -18,10 +22,8 @@ Or install it yourself as:
 
 ## Usage
 
-Add your LESS file
+Add this line to your LESS file:
 
     @import "twitter/bootstrap";
     @import "bootswatch/cerulean/bootswatch";
     @import "bootswatch/cerulean/variables";
-
-

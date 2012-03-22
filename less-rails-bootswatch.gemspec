@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["takai@recompile.net"]
   gem.description   = %q{less-rails-bootswatch is straightforward Bootswatches integration with Rails, works well with less-rails-bootstrap.}
   gem.summary       = %q{Straightforward Bootswatches integration with Rails}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/takai/less-rails-bootswatch"
 
   gem.executables   = []
   gem.files         = Dir.glob('{[A-Z]*,lib/**/*.rb,vendor/**/*.less}')
