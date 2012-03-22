@@ -1,3 +1,0 @@
-[submodule "vendor/assets/stylesheets/bootswatch"]
-	path = vendor/assets/stylesheets/bootswatch
-	url = https://github.com/thomaspark/bootswatch.git
