@@ -3,7 +3,7 @@ require "bundler/gem_tasks"
 ORIGIN = 'https://github.com/thomaspark/bootswatch.git'
 BOOTSWATCH_DIR = 'tmp/bootswatch'
 
-STYLESHEETS_DIR = 'vendor/assets/stylesheets/bootswatch'
+STYLESHEETS_DIR = 'vendor/frameworks/stylesheets/bootswatch'
 
 task :default => [:update]
 
