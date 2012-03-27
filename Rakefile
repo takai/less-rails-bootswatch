@@ -5,6 +5,8 @@ BOOTSWATCH_DIR = 'tmp/bootswatch'
 
 STYLESHEETS_DIR = 'vendor/assets/stylesheets/bootswatch'
 
+task :default => [:update]
+
 file BOOTSWATCH_DIR do
   sh "git clone -b gh-pages #{ORIGIN} #{BOOTSWATCH_DIR}"
 end
@@ -34,8 +36,8 @@ task :update => :pull do
         dst_file.print(l.gsub('../img', './twitter/bootstrap'))
       end
     ensure
-      src_file.close
-      dst_file.close
+      src_file.close if src_file
+      dst_file.close if dst_file
     end
   end
 end
