@@ -10,6 +10,7 @@ This gem depends on following:
 
 Add this line to your application's Gemfile:
 
+    gem 'less-rails'
     gem 'less-rails-bootswatch'
 
 And then execute:
