@@ -8,23 +8,29 @@ This gem depends on following:
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this lines to your application's Gemfile:
 
-    gem 'less-rails'
-    gem 'less-rails-bootswatch'
+```ruby
+group :assets do
+  gem 'therubyracer'
+  gem 'less-rails'
+  gem 'less-rails-bootstrap'
+  gem 'less-rails-bootswatch'
+end
+```
 
 And then execute:
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install less-rails-bootswatch
+```
+$ bundle
+```
 
 ## Usage
 
 Add this line to your LESS file:
 
-    @import "twitter/bootstrap";
-    @import "bootswatch/cerulean/bootswatch";
-    @import "bootswatch/cerulean/variables";
+```css
+@import "twitter/bootstrap";
+@import "bootswatch/cerulean/bootswatch";
+@import "bootswatch/cerulean/variables";
+```
