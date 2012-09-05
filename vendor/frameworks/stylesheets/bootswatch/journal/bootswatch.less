@@ -72,7 +72,7 @@ hr {
 	}
 
 	.brand {
-		padding: 16px 20px 20px;
+		padding: 19px 20px 21px;
 		font-size: 24px;
 		font-weight: bold;
 		text-shadow: none;
@@ -80,23 +80,22 @@ hr {
 	}
 
 	.nav > li > a {
-		padding: 20px 10px 21px;
+		padding: 20px 10px 20px;
 		font-size: 18px;
 		text-shadow: none;
 		text-transform: uppercase;
 	}
 
-	.nav > li.active > a {
+	.nav > .active > a {
 		background-color: transparent;
-		color: @headingsColor;
 	}
 
 	.navbar-text {
-		margin-top: 21px;
+		margin-top: 20px;
 		padding-left: 10px;
 		padding-right: 10px;
 		font-size: 18px;
-		line-height: 18px;
+		line-height: 20px;
 	}
 
 	.nav > .active > a,
@@ -105,15 +104,9 @@ hr {
 		.box-shadow(none);
 	}
 
-	.nav li.dropdown > .dropdown-toggle:hover,
-	.nav li.dropdown.active > .dropdown-toggle:hover {
-		color: @black;
-	}
-
-	.nav li.dropdown > .dropdown-toggle .caret,
-	.nav li.dropdown.open > .dropdown-toggle:hover .caret {
-		border-top-color: @headingsColor;
-		border-bottom-color: @headingsColor;
+	.divider-vertical {
+		border-left-color: @grayLighter;
+		border-right-color: @grayLighter;
 	}
 
 	.dropdown-menu {
@@ -127,10 +120,29 @@ hr {
 		}
 	}
 
-	.nav-collapse.collapse {
+	.navbar-search .search-query,
+	.navbar-search .search-query:hover {
+		border: 2px solid @grayLighter;
+		color: @textColor;
+		.placeholder(@gray);
+	}
+}
+
+@media (max-width: @navbarCollapseWidth) {
+
+	.nav-collapse .navbar-form,
+	.nav-collapse .navbar-search {
+		margin-bottom: 0;
+		border-top: 2px solid @grayLighter;
+		border-bottom: 2px solid @grayLighter;
+	} 
+
+
+
+	.navbar .nav-collapse {
 
 		.nav li > a {
-			color: @headingsColor;
+			color: @navbarLinkColor;
 
 			&:hover {
 				background-color: @dropdownLinkBackgroundHover;
@@ -142,11 +154,17 @@ hr {
 		}
 	}
 
-	.navbar-search .search-query,
-	.navbar-search .search-query:hover {
-		border: 2px solid @grayLighter;
-		color: @textColor;
-		.placeholder(@gray);
+	.navbar-inverse .nav-collapse {
+
+		.nav li > a {
+			color: @navbarInverseLinkColor;
+
+			&:hover {
+				background-color: #111;
+				background-image: none;
+			}
+		}
+
 	}
 }
 
@@ -306,15 +324,4 @@ legend {
 	.nav > li.dropdown.open.active > a:hover {
 		border-color: #e5e5e5;
 	}
-}
-
-@media (max-width: 979px) {
-
-	.nav-collapse .navbar-form,
-	.nav-collapse .navbar-search {
-		margin-bottom: 0;
-		border-top: 2px solid @grayLighter;
-		border-bottom: 2px solid @grayLighter;
-	} 
-
 }
